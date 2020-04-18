@@ -1,7 +1,5 @@
 const fs = require('fs');
-require('dotenv').config({
-    path: process.env.NODE_ENV === 'test' ? '.env.testing' : '.env'
-});
+require('./configenv');
 const AWS = require('aws-sdk');
 
 const s3 = new AWS.S3({
